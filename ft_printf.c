@@ -6,13 +6,14 @@
 /*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:40:15 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/21 18:27:00 by kamelialaks      ###   ########.fr       */
+/*   Updated: 2022/11/21 18:35:45 by kamelialaks      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_printf(const char *fmt, ...)
 {
     int		i;
+    int     len;
 	va_list args;
 
 	i = 0;
@@ -20,12 +21,13 @@ int	ft_printf(const char *fmt, ...)
     while (fmt[i])
     {
         if (fmt[i] == '%')
-            ft_formats(fmt[++i] + 1, args);
+            ft_formats(fmt[++i] + 1, args, &len);
       else
       {
-          write(1, fmt + i, 1);
+          len = write(1, fmt + i, 1);
           i++;
       }
     }
     va_end(args);
+    return (len);
 }

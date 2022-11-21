@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 16:40:15 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/21 18:27:00 by kamelialaks      ###   ########.fr       */
+/*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
+/*   Updated: 2022/11/21 18:09:28 by kamelialaks      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_printf(const char *fmt, ...)
+ft_formats(char fmt, va_list args)
 {
-    int		i;
-	va_list args;
-
-	i = 0;
-    va_start(args, fmt);
-    while (fmt[i])
-    {
-        if (fmt[i] == '%')
-            ft_formats(fmt[++i] + 1, args);
-      else
-      {
-          write(1, fmt + i, 1);
-          i++;
-      }
-    }
-    va_end(args);
+    int len;
+    
+    len = 0;
+    if (fmt == 'c')
+        
 }

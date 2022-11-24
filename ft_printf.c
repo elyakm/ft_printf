@@ -6,7 +6,7 @@
 /*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:40:15 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/23 19:14:57 by kamelialaks      ###   ########.fr       */
+/*   Updated: 2022/11/23 19:46:25 by kamelialaks      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *fmt, ...)
     while (fmt[i])
     {
         if (fmt[i] == '%')
-            ft_formats(fmt[++i] + 1, args);
+            ft_formater(fmt[++i] + 1, args);
       else
       {
           len += write(1, fmt + i, 1);

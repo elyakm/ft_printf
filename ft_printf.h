@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/26 12:52:01 by kamelialaks      ###   ########.fr       */
+/*   Created: 2022/11/26 14:22:57 by kamelialaks       #+#    #+#             */
+/*   Updated: 2022/11/26 14:25:12 by kamelialaks      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- int	ft_formater(va_list arg, const char fmt)
-{
-	int	len;
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-	len = 0;
-	if (format == 'c')
-		len += ft_putchar(va_arg(arg, int));
-	else if (format == 's')
-		len += ft_putstr(va_arg(arg, char *));
-	else if (format == '%')
-		len += ft_putchar('%');
-}
+# include <stdarg.h>
+
+int		ft_printf(const char *format, ...);
+int		ft_formater(va_list arg, const char fmt);
+int		ft_putchar(int c);
+int		ft_putstr(char *str);
+
+#endif

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
+/*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:40:15 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/23 19:46:25 by kamelialaks      ###   ########.fr       */
+/*   Updated: 2022/11/27 15:03:57 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_printf(const char *fmt, ...)
 {

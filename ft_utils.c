@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format.c                                        :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/27 16:29:33 by klaksi           ###   ########.fr       */
+/*   Created: 2022/11/27 15:54:28 by klaksi            #+#    #+#             */
+/*   Updated: 2022/11/27 16:26:14 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int	ft_formater(va_list arg, const char fmt)
+int	ft_putchar(char c)
 {
-	int	len;
+	write(1, &c, 1);
+	return(1);
+}
 
-	len = 0;
-	if (fmt == 'c')
-		len += ft_putchar(va_arg(arg, int));
-	else if (fmt == 's')
-		len += ft_putstr(va_arg(arg, char *));
-	else if (fmt == '%')
-		len += ft_putchar('%');
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if(!str)
+	{
+		ft_putstr("(null)");
+		return(6);
+	}
+	while (str[i])
+		ft_putchar(str[i++]);
+	return(i);
 }

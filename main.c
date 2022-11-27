@@ -6,7 +6,16 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 16:28:50 by klaksi            #+#    #+#             */
-/*   Updated: 2022/11/27 16:28:50 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/27 16:52:54 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int	main(void)
+{
+	char c;
+	
+	c = 'v';
+	ft_printf("%c\n", c);
+}

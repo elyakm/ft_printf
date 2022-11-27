@@ -6,11 +6,13 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 15:54:28 by klaksi            #+#    #+#             */
-/*   Updated: 2022/11/27 16:26:14 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/27 17:01:48 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_putchar(char c)
+#include "ft_printf.h"
+
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return(1);

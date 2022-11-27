@@ -4,22 +4,19 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = *.c
+SRC = ft_format.c ft_printf.c ft_utils.c
 
 OBJECTS = $(SRC:.c=.o)
 
-RE = rm -f
+RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar -rcs $(NAME) $(OBJECTS)
 
-$(OBJECTS): $(SRC)
-	$(CC) $(CFLAGS) -c $(SRC)
-
 clean:
-	$(RM) $(OBJECTS) $(BONUS_OBJECTS)
+	$(RM) $(OBJECTS)
 
 fclean: clean
 	$(RM) $(NAME)

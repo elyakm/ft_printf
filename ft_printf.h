@@ -6,12 +6,13 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 14:22:57 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/27 15:05:17 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/27 16:53:20 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+#include <unistd.h>
 
 # include <stdarg.h>
 

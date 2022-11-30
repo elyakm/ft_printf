@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/30 10:38:18 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/30 10:42:00 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	ft_formater(va_list arg, const char fmt)
 		ft_putnbr_base(va_arg(arg, unsigned int), "0123456789abcdef", &len);
 	else if (fmt == 'X')
 		ft_putnbr_base(va_arg(arg, unsigned int), "0123456789ABCDEF", &len);
-	return(len);
+	return (len);
 }

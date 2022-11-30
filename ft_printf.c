@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 16:40:15 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/27 17:38:11 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/30 10:43:33 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_printf(const char *fmt, ...)
 {
-    int		i;
-    int     len;
-	va_list args;
+	int		i;
+	int		len;
+	va_list	args;
 
 	i = 0;
 	len = 0;

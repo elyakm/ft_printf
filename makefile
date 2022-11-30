@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_format.c ft_printf.c ft_utils.c
+SRC = ft_printf.c ft_utils.c
 
 OBJECTS = $(SRC:.c=.o)
 

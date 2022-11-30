@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 15:54:28 by klaksi            #+#    #+#             */
-/*   Updated: 2022/11/30 10:42:50 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/30 10:49:57 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,16 @@ int	ft_putstr(char *str)
 	return (i);
 }
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
 void	ft_putnbr_base(long nbr, char *base, int *len)
 {
 	size_t	base_len;
@@ -40,7 +50,7 @@ void	ft_putnbr_base(long nbr, char *base, int *len)
 	base_len = ft_strlen(base);
 	if (nbr < 0 && base_len <= 10)
 	{
-		*len += ft_print_char('-');
+		*len += ft_putchar('-');
 		nbr *= -1;
 	}
 	if ((size_t)nbr >= base_len)
@@ -49,5 +59,5 @@ void	ft_putnbr_base(long nbr, char *base, int *len)
 		ft_putnbr_base(nbr % base_len, base, len);
 	}
 	else
-		*len += ft_print_char(base[nbr]);
+		*len += ft_putchar(base[nbr]);
 }

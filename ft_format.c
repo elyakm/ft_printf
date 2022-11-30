@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/30 10:36:53 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/30 10:37:33 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_formater(va_list arg, const char fmt)
 	}
 	else if (fmt == 'd' || fmt == 'i')
 		ft_putnbr_base(va_arg(arg, int), "0123456789", &len);
+	else if (fmt == 'u')
+		ft_putnbr_base(va_arg(arg, unsigned int), "0123456789", &len);
 	
 	return(len);
 }

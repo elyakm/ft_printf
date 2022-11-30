@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 18:08:58 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/27 16:56:07 by klaksi           ###   ########.fr       */
+/*   Updated: 2022/11/30 10:28:37 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ int	ft_formater(va_list arg, const char fmt)
 		len += ft_putstr(va_arg(arg, char *));
 	else if (fmt == '%')
 		len += ft_putchar('%');
-	return(len);
-}
+

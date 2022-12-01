@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 14:22:57 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/11/30 19:30:58 by klaksi           ###   ########.fr       */
+/*   Created: 2022/11/30 19:33:00 by klaksi            #+#    #+#             */
+/*   Updated: 2022/11/30 19:40:40 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int		ft_printf(const char *fmt, ...);
-int		ft_putchar(int c);
-int		ft_putstr(char *str);
-void	ft_putnbr_base(long nbr, char *base, int *len);
-
-#endif
+int	main (void)
+{
+	int *ptr;
+	int var;
+	
+	var = 5746;
+	ptr = &var;
+	ft_printf("%p\n", ptr);
+}
